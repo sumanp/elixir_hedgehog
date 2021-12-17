@@ -18,3 +18,8 @@ import Config
 #
 config :logger,
   level: :info
+
+config :binance,
+  api_key: "xxx",
+  secret_key: "xxx",
+  end_point: "https://api.binance.us" # Add for the US API end point. The default is for "https://api.binance.com"
