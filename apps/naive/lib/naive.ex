@@ -12,7 +12,7 @@ defmodule Naive do
       :world
 
   """
-  def hello do
-    :world
+  def send_event(%TradeEvent{} = event) do
+    GenServer.cast(:trader, event)
   end
 end
