@@ -12,6 +12,7 @@ import Config
 if File.exists?('config/secrets.exs') do
   import_config('secrets.exs')
 end
+
 # Sample configuration:
 #
 #     config :logger, :console,
@@ -25,4 +26,8 @@ config :logger,
 config :binance,
   api_key: "xxx",
   secret_key: "xxx",
-  end_point: "https://api.binance.us" # Add for the US API end point. The default is for "https://api.binance.com"
+  # Add for the US API end point. The default is for "https://api.binance.com"
+  end_point: "https://api.binance.us"
+
+config :naive,
+  binance_client: BinanceMock
